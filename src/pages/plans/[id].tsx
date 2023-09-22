@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { useState } from 'react'
-import type { InferGetServerSidePropsType,GetServerSidePropsContext } from 'next'
+import type { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
 import { api } from '@/utils/api';
 import { PaginateOptions } from 'prisma-pagination';
 import { useRouter } from 'next/router';
@@ -28,6 +28,14 @@ export const getServerSideProps = (context: GetServerSidePropsContext) => {
         }
     }
     return { props: { id } }
+}
+
+const BankDetailes = {
+    bank: 'Ujjivan Small Finance Bank Limited',
+    name: 'NKPAYS Private Limited',
+    accountNo: '3567120040000155',
+    ifscCode: 'UJVN0003567',
+    branch: 'TITABAR'
 }
 
 const SelectePlan = ({
@@ -60,11 +68,35 @@ const SelectePlan = ({
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className='rounded-xl shadow overflow-hidden'>
+                    {/* <div className='rounded-xl shadow overflow-hidden'>
                         <Image alt="" src={'/assets/images/payment-qr-1.jpg'} width={800} height={400}/>
-                    </div>
+                    </div> */}
                     <div className='rounded-xl shadow overflow-hidden'>
-                        <Image alt="" src={'/assets/images/payment-qr-2.jpg'} width={800} height={400}/>
+                        <Image alt="" src={'/assets/images/payment-qr-2.jpg'} width={800} height={400} />
+                    </div>
+                    <div className=''>
+                        <div className='rounded-xl shadow overflow-hidden p-5 space-y-5'>
+                            <p className='capitalize font-bold'>{BankDetailes.bank}</p>
+
+                            <div className="space-y-3">
+                                <div className='flex flex-col'>
+                                    <span className='font-bold text-sm'>Name: </span>
+                                    <span className='font-medium'>{BankDetailes.name}</span>
+                                </div>
+                                <div className='flex flex-col text-sm'>
+                                    <span className='font-bold'>Account: </span>
+                                    <span className='font-medium'>{BankDetailes.accountNo}</span>
+                                </div>
+                                <div className='flex flex-col text-sm'>
+                                    <span className='font-bold'>IFSC: </span>
+                                    <span className='font-medium'>{BankDetailes.ifscCode}</span>
+                                </div>
+                                <div className='flex flex-col text-sm'>
+                                    <span className='font-bold'>Branch: </span>
+                                    <span className='font-medium'>{BankDetailes.branch}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
