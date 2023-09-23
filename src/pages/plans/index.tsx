@@ -12,6 +12,7 @@ import PlanCard from '@/components/plan/PlanCard'
 
 const PricingPage = () => {
     const { data, isLoading } = api.plans.getAll.useQuery({})
+    const {data:files} = api.uploadFile.getAll.useQuery({});
     return (
         <>
             <section className='h-64 bg-[#045bcc3a]  relative'>
@@ -42,9 +43,13 @@ const PricingPage = () => {
 
             <Section sectionTitle='Our Commission Charts'>
                     <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div className='rounded-xl overflow-hidden p-3 shadow-lg'><Image width={800} height={600} src={'/assets/images/plan-chart-1.jpg'} alt={''} /></div>
-                        <div className='rounded-xl overflow-hidden p-3 shadow-lg'><Image width={800} height={500} src={'/assets/images/plan-chart-2.jpg'} alt={''} /></div>
-                        <div className='rounded-xl overflow-hidden p-3 shadow-lg'><Image width={800} height={700} src={'/assets/images/plan-chart-3.jpg'} alt={''} /></div>
+                        {
+                            files?.data.map(file => {
+                                return <div key={nanoid()} className='rounded-xl overflow-hidden p-3 shadow-lg'>
+                                    <Image width={800} height={600} src={file.publicUrl||""} alt={file.title||''} />
+                                    </div>
+                            })
+                        }
                     </div>
             </Section>
 

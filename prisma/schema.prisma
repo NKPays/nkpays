@@ -205,3 +205,12 @@ enum LeadStatus {
     CLOSED
     DECLINED
 }
+
+model UploadFile {
+    id        Int      @id @default(autoincrement())
+    title     String?
+    publicUrl String?
+    meta      Json?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}

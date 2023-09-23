@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React, { type PropsWithChildren, type ReactElement } from 'react';
 import Logo from '../shared/Logo'
-import { Archive, BadgeDollarSign, File, LayoutDashboard, Link2, Mail, MessageSquareDashed, Settings, ShoppingBag, Sparkles, Users } from 'lucide-react'
+import { Archive, BadgeDollarSign, File, FileBarChart2, LayoutDashboard, Link2, Mail, MessageSquareDashed, Settings, ShoppingBag, Sparkles, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { cn } from '@/lib/utils'
@@ -83,6 +83,11 @@ const SideBar = ({
             lable: 'Leads',
             link: '/admin/leads',
             icon: <Users />
+        },
+        {
+            lable: 'Commission Charts',
+            link: '/admin/comission',
+            icon: <FileBarChart2/>
         },
     ]
     return (

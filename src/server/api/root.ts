@@ -10,6 +10,7 @@ import { PageRouter } from './routers/page';
 import { PlansRouter } from './routers/plans';
 import { SchemaRouter } from './routers/schemes';
 import { LeadsRouter } from './routers/leads';
+import { UploadFileRouter } from './routers/uploadFile';
 
 /**
  * This is the primary router for your server.
@@ -27,7 +28,8 @@ export const appRouter = createTRPCRouter({
   page: PageRouter,
   plans: PlansRouter,
   schemes: SchemaRouter,
-  leads: LeadsRouter
+  leads: LeadsRouter,
+  uploadFile: UploadFileRouter
 });
 
 // export type definition of API

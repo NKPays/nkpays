@@ -8,3 +8,7 @@ export async function supabaseUpload (file: File, option?: {filePath?: string}){
     const fp = option?.filePath||`${nanoid(5)}-${Math.random()}.${fileExt!}`
     return await SupabaseStorage.upload(fp, file)
 }
+
+export async function supabaseRemove(path: string[]){
+   return await SupabaseStorage.remove(path)
+}
