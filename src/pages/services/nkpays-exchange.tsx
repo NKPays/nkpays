@@ -35,13 +35,13 @@ const content = {
         },
         {
             title: 'Instant Redeem',
-            desc: '',
+            desc: 'No waiting around. With NkPays Exchange, your funds are available immediately after every successful transaction',
             image: '/assets/images/icons/instant-redeem.png',
             highlight: true
         },
         {
             title: 'Multiple Seller Available',
-            desc: '',
+            desc: "Don't settle for limited choices. NkPays Exchange connects you with a network of multiple sellers, offering a wide variety of Lapu/API stock.",
             image: '/assets/images/icons/seller-available.png'
         },
     ]
