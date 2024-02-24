@@ -39,7 +39,7 @@ const GoogleMapWidget = () => {
 
             </GoogleMapReact> */}
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.7988520037716!2d94.18151777542843!3d26.59082927684053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3746ef3ee8964281%3A0xe0125100f6d03c69!2sNKPAYS%20PRIVATE%20LIMITED!5e0!3m2!1shi!2sin!4v1708789340660!5m2!1shi!2sin" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3567.5976865945167!2d94.16051867542859!3d26.59728237683663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDM1JzUwLjIiTiA5NMKwMDknNDcuMSJF!5e0!3m2!1sen!2sin!4v1708797644096!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             frameBorder="0" 
