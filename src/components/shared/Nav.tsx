@@ -83,6 +83,7 @@ const Nav = () => {
                 { lable: 'Travel Booking', link: '/services/travel-booking-api' },
                 { lable: 'General Insurance', link: '/services/general-insurance' },
                 { lable: 'Domestice Money Transfer', link: '/services/domestice-money-transfer' },
+                { lable: 'NkPays Exchange', link: '/services/nkpays-exchange' },
               ]} />
             <NavLink href={'/about'}>About Us</NavLink>
             <NavLink href={'/shop'}>Shop</NavLink>
@@ -122,6 +123,7 @@ const Nav = () => {
                 { lable: 'Travel Booking', link: '/services/travel-booking-api' },
                 { lable: 'General Insurance', link: '/services/general-insurance' },
                 { lable: 'Domestice Money Transfer', link: '/services/domestice-money-transfer' },
+                { lable: 'NkPays Exchange', link: '/services/nkpays-exchange' },
               ] },
               { link: '/about', lable: 'About' },
               { link: '/contact', lable: 'Contact' },

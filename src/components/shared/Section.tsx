@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal'
 
 export type SectionProps = {
     sectionTitle?: string,
-    sectionDesc?: string,
+    sectionDesc?: string|React.ReactNode,
     titleClassnames?: string
 } & React.HTMLAttributes<HTMLDivElement>
 
@@ -47,7 +47,13 @@ const Section = ({
                         &&
                         <div className='overflow-hidden flex text-gray-600  items-center  justify-center w-full'>
                             <Fade triggerOnce direction='down' delay={100} className='max-w-xl'>
-                                <p className='text-center text-muted-foreground'>{sectionDesc}</p>
+                            {
+                                    typeof sectionDesc === 'string'
+                                        ?
+                                        <p className='text-center text-muted-foreground'>{sectionDesc}</p>
+                                        :
+                                        sectionDesc
+                                }
                             </Fade>
                         </div>
                     }
